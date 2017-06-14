@@ -1,3 +1,8 @@
 from django.db import models
 
-# Create your models here.
+
+class ListItem(models.Model):
+    """
+    Items to do, tasks to complete; A single item in a To Do list.
+
+    """
