@@ -12,8 +12,8 @@
         <ul id="tasks">
         <!-- Leave empty for javascript -->
 
-        {% for item in items %}
-          <li> {{ item }} </li>
+        {% for item in items %}     # Django for loop
+          <li> {{ item.title }} {{ item.completed }}</li>
         {% endfor %}
 
 
