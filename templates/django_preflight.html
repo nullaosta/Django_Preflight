@@ -2,27 +2,25 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title>My To-Do List</title>
-    <link rel="stylesheet" href="static/css/to-do_list.css">
+    <title>Django Preflight</title>
+    <link rel="stylesheet" href="static/css/django_preflight.css">
   </head>
   <body>
     <main id="container">
-      <h1>To-do List</h1>
-      <form id="form">
-        <fieldset>
-          <input required type="text" id="new_task"><br>
-          <br>
-          <button type="submit" id="submit_button" value="Submit">Submit</button><br>
-        </fieldset>
-      </form>
-      <article id="to-do_list">
-        <item id="counter">0</item>
+      <h1>Django Preflight Checklist</h1>
+      <article id="checklist">
         <ul id="tasks">
         <!-- Leave empty for javascript -->
+
+        {% for item in items %}
+          <li> {{ item }} </li>
+        {% endfor %}
+
+
         </ul>
       </article>
     </main>
   </body>
   <script type="text/javascript" src="static/vendor/jquery-3.2.1.min.js"></script>
-  <script type="text/javascript" src="static/js/to-do_list.js"></script>
+  <script type="text/javascript" src="static/js/django_preflight.js"></script>
 </html>
