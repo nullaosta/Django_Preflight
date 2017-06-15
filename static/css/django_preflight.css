@@ -7,14 +7,14 @@ html {
   justify-content: space-around;
   align-items: center;
   text-align: center;
-  color: white;
+  color: lightgrey;
   border-color: red;
   border-width: 1px;
   border-style: dashed;
 }
 
 h1 {
-  font-family: sans-serif;
+  font-family: Roboto;
   font-size: 40px;
 }
 

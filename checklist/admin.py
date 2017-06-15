@@ -1,8 +1,10 @@
 from django.contrib import admin
-from .models import ListItem
+from .models import Step, Checklist
 
 # Register your models here.
 
-admin.site.register(ListItem)
+admin.site.register(Step)
+admin.site.register(Checklist)
+
 
 

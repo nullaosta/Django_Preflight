@@ -8,17 +8,25 @@
   <body>
     <main id="container">
       <h1>Django Preflight Checklist</h1>
+
       <article id="checklist">
         <ul id="tasks">
         <!-- Leave empty for javascript -->
 
-        {% for item in items %}     # Django for loop
-          <li> {{ item.title }} {{ item.completed }}</li>
-        {% endfor %}
-
-
+        {% for checklist in items %}
+            <ol>
+                <h3> {{ checklist.title }}</h3>
+                {% for step in checklist.steps.all %}
+                    <li>
+                        {{ step.title }}
+                         <input type="checkbox">
+                    </li>
+                {% endfor %}
+            </ol>
+           {% endfor %}
         </ul>
       </article>
+
     </main>
   </body>
   <script type="text/javascript" src="static/vendor/jquery-3.2.1.min.js"></script>

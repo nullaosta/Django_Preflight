@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from .models import ListItem
+from .models import Step, Checklist
 
 
 def itinerary(request):
@@ -7,7 +7,7 @@ def itinerary(request):
     Create an introductory page for Django preflight planner. 
     
     """
-    items = ListItem.objects.all()     # queryset
+    items = Checklist.objects.order_by("ordering")     # queryset
     context = {'items': items}
 
     return render(request, 'django_preflight.html', context)
